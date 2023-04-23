@@ -8,4 +8,11 @@ authors = [
     {name = "tad", email = "tad@gmail.com"},
 ]
 description = "My package description"
-version = "0.0.0"
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "src1.versioning.__version__"}
+
+# [metadata]
+# version = {python = "src.utills.get_version()"}   USELESS, CHATGPT SUGGETION
+
